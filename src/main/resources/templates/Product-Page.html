@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="templateUser :: head"></div>
+<body>
+
+<div class="top-border"></div>
+
+<div class="contain">
+
+    <div th:replace="templateUser :: header" ></div>
+    <div th:replace="templateUser :: logo" ></div>
+
+
+    <div class="wrapper">
+        <div class=" row">
+            <div th:replace="templateUser :: nav"></div>
+
+            <div class=" view col-9">
+                <p class="title ">  <a style="color: red" href="/">Home</a>  <a class="link-edit" th:text=" '>' +' '+ ${product.getStore_Name()}" th:href="@{/product(name=${product.getName()})}"></a>   </p>
+                <div class=" top-slice row">
+                    <div class=" photo col-md-5">
+                        <img src="photo/shop.gif" alt="ANY">
+                    </div>
+
+
+                    <div class=" info col-md-6">
+                        <h1 th:text="${product.getName()}">  </h1>
+                        <p th:text="${product.getProduct_price_In_store()} + ' ' + '$' " class="price"></p>
+
+                        <form action="/cart" method="post">
+                            <input required class="counter" type="number" step="1" th:max="${product.getProduct_Quantity_In_store() }"  value="1" name="quantity">
+                            <input type="text" hidden name="productName" th:value="${product.getName()}">
+                            <input type="number" step="any" hidden name="price" th:value="${product.getPrice()}">
+                            <input type="submit" name="submit" class="button" value="Add To Cart" >
+                        </form>
+                        <div class="social"> <i class="fa fa-facebook "></i> <i class="fa fa-instagram "></i> <i class="fa fa-google-plus "></i></div>
+
+                    </div>
+                </div>
+
+                <h4>Specification</h4>
+                <p th:text="${product.getProduct_Description()}" class="description">
+
+                </p>
+
+                <h4>Brand</h4>
+                <p class="description" th:text="${product.getBrandName()}"></p>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div th:replace="templateUser :: footer"></div>
+
+</div>
+
+
+
+</body>
+</html>

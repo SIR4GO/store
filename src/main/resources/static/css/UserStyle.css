@@ -1,0 +1,283 @@
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     font-family: sans-serif Arial Tahoma   ;
+}
+.main-color
+{
+    color: #333333;
+}
+.vertical-align
+{
+    margin: auto 0;
+
+}
+horizonatl-align
+{
+    margin: 0 auto;
+}
+.link-edit{
+
+    text-decoration: none;
+    color: #333333;
+}
+
+
+body .top-border
+{
+    height: 4px;
+    background-color: #333333;
+}
+body .contain
+{
+    width: 1235px;
+    margin: auto;
+}
+
+body .header
+{
+    height: 50px;
+    display: flex;
+    border-bottom: 1px solid #E8E8E8;
+    justify-content: space-between;
+}
+
+body .header .shop-cart
+{
+    display: flex;
+}
+
+body .header .shop-cart *
+{
+    margin-right: 10px;
+}
+body .header .shop-cart .main-link
+{
+    color:#333333 ;
+    text-decoration: none;
+    display: flex;
+
+}
+body .header .shop-cart .main-link i
+{
+    font-size: 25px;
+}
+
+
+body .header .shop-cart .main-link p span
+{
+    background-color: red;
+    color: white;
+    padding: 0 4px;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+
+body .header .shop-cart  .another-link
+{
+    color: #333333 ;
+    text-decoration: none;
+}
+
+
+body .logo
+{
+    height: 140px;
+    display: flex;
+
+}
+body .logo h1
+{
+    font-weight: bolder;
+}
+
+body .wrapper
+{
+    margin-top: 20px;
+}
+body .wrapper .list ul
+{
+    list-style: none;
+    padding: 0;
+
+}
+
+
+body .wrapper .list ul li
+{
+    border-bottom: 1px solid #E8E8E8;
+    padding: 12px 0;
+}
+body .wrapper .list ul li:first-child
+{
+    font-weight: bold;
+    border-top: 1px solid #E8E8E8;
+}
+body .wrapper .list ul li:last-child
+{
+    border-bottom: none;
+}
+body .wrapper .list ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+body .wrapper .list ul li:last-child i
+{
+    margin-right: 10px;
+    font-size: 18px;
+
+
+}
+
+body .wrapper  .view {
+    margin-bottom: 150px;
+    border-top: 1px solid #E8E8E8;
+
+}
+
+/* Index2 view style */
+body .wrapper  .view .title  {
+margin-top: 10px;
+}
+
+body .wrapper  .view .top-slice{
+   height: 300px;
+}
+
+body .wrapper  .view .top-slice .photo img {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+body .wrapper  .view .top-slice .info *{
+margin-left: 20px;
+}
+body .wrapper  .view .top-slice .info p
+{
+    margin-bottom: 50px;
+}
+body .wrapper  .view .top-slice .info .counter
+{
+    display: block;
+    margin-bottom: 30px;
+    width: 35px;
+    margin-left: 0;
+    text-align: center;
+}
+body .wrapper  .view .top-slice .info .button
+{
+
+    text-decoration: none;
+    outline: none;
+    background: none;
+    color: black;
+    padding: 6px 16px;
+    word-spacing: 4px;
+    border: 2px solid black ;
+    margin-left: 0;
+
+}
+body .wrapper  .view .top-slice .info .social
+{
+    margin-top: 30px;
+    margin-left: 0;
+}
+body .wrapper  .view .top-slice .info h1:first-letter
+{
+    text-transform: uppercase;
+}
+body .wrapper  .view .top-slice .info .social i
+{
+    font-size: 20px;
+}
+body .wrapper  .view h4
+{
+    margin-top: 100px;
+}
+
+body .wrapper  .view .description
+{
+    margin: 15px 0 15px  23px ;
+
+}
+body .wrapper  .view .description:first-letter
+{
+     text-transform: uppercase;
+    font-size: 20px;
+
+
+}
+
+    /* Index2 view style */
+
+/* Index3 view style */
+body .wrapper  .view table
+{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+body .wrapper  .view table tr
+{
+    border-bottom: 1px solid #E8E8E8;
+
+}
+body .wrapper .view .order-info
+{
+    margin-top: 100px;
+}
+body .wrapper .view .order-info .link-1
+{
+    text-decoration: none;
+    color: black;
+    padding: 6px 16px;
+    word-spacing: 4px;
+    border: 2px solid black ;
+    display: inline-block;
+}
+body .wrapper .view .order-info .link-2
+{
+    text-decoration: none;
+    color: white;
+    padding: 6px 16px;
+    word-spacing: 4px;
+    border: 2px solid black ;
+    background-color:black;
+    margin-top: 30px;
+
+
+}
+/* Index3 view style */
+
+
+body footer
+{
+
+    display: flex;
+    height: 85px;
+    border-top: 1px solid #E8E8E8;
+    font-size: 14px;
+    justify-content: space-between;
+    border-top: 1px solid #E8E8E8;
+
+}
+
+body footer .line p
+{
+    margin: 0;
+}
+
+
+body footer .icons i
+{
+    font-size: 20px;
+    margin-right: 20px;
+}

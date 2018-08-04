@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="templateOwner :: head"></div>
+
+<body>
+
+<div class="wrapper">
+    <div th:replace="templateOwner :: header"></div>
+    <!--<div th:replace="templateOwner :: nav"></div>-->
+
+    <div class="view" style="width: 100%">
+        <form method="post"  style = " width: 80% ; display: block ; margin :  60px auto 0 auto ; " >
+
+
+
+
+            <div class= " row ">
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" class="color-edit"> My Stores In System  </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect1" name="store"  >
+
+                            <option th:each="store  : ${stores} "  th:text=" ${store.getName()} + ' ' + ' ('  +  ${store.getStatue()} + ')' "  th:value="${store.getName()}">
+
+                            </option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class=" col-lg-12 col-sm-12  ">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2" class="color-edit"> Products In System  </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect2" name="productName"  >
+
+                            <option th:each="product  : ${products} "  th:text=" ${product.getName()} + ' ' + ' ('  +  ${product.getPrice()} + ')' + '   ' + ' ('  +  ${product.getBrandName()} + ')' + '  ' + ' ('  +  ${product.getQuantity()} + '  ' +'Units' + ')'   "  th:value="${product.getName()}">
+                            </option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6">
+
+                    <div class="form-group " >
+                        <label for="examplePrice" class="color-edit "  > Product Price </label>
+                        <input  required name="price" type="number" step="any"  class="form-control" id="examplePrice" aria-describedby="PriceHelp" placeholder="Enter Price">
+                        <small   id="PriceHelp" class="form-text text-muted"> Enter numeric value </small>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect3" class="color-edit"> Categories In System  </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect3" name="category"  >
+
+                            <option  value="electronics">Electronics</option>
+                            <option  value="clothes">Clothes</option>
+                            <option  value="accessories">Accessories</option>
+                            <option  value="shoes">Shoes</option>
+                            <option  value="software">Software</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-6 col-sm-6">
+                    <div class="form-group" >
+                        <label for="exampleQuantity" class="color-edit"> Enter Quantity </label>
+                        <input required name="quantity" type="number" step="1" class="form-control" id="exampleQuantity" aria-describedby="QuantityHelp" placeholder="Enter Quantity ">
+                        <small  id="QuantityHelp" class="form-text text-muted">Enter Numeric value </small>
+                    </div>
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleTitleName" class="color-edit"> Enter Title </label>
+                        <input required name="title" type="text" class="form-control" id="exampleTitleName" aria-describedby="TitleHelp" placeholder="Enter Title">
+                        <small id="TitleHelp" class="form-text text-muted"> Recommended Lowercase characters  </small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleDesName" class="color-edit"> Enter Description </label>
+                        <textarea required name="description"  class="form-control" id="exampleDesName" aria-describedby="DesHelp" placeholder="Enter Description">
+                        </textarea>
+                        <small id="DesHelp" class="form-text text-muted"> Recommended Lowercase characters  </small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleOfferName" class="color-edit"> Enter Offer </label>
+                        <input  name="offer" type="number" step="any" class="form-control" id="exampleOfferName" aria-describedby="OfferHelp" placeholder="Enter Offer">
+                        <small id="OfferHelp" class="form-text text-muted"> Recommended percentage  </small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="examplePhoto" class="color-edit"> Enter Photo Url </label>
+                        <input  required name="photoUrl" type="url"  class="form-control" id="examplePhoto" aria-describedby="PhotoHelp" placeholder="Enter Url ">
+                        <small id="PhotoHelp" class="form-text text-muted"> Recommended Product's Url Photo  </small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" name="submit" value=" Add Product " style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
+<div th:replace="templateOwner :: scripts"></div>
+
+
+
+</body>
+</html>

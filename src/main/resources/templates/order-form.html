@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body .home
+        {
+            display: flex;
+        }
+        body .home .view
+        {
+            margin: 100px auto 0 auto;
+            width: 50%;
+            height:480px;
+        }
+
+        body .home .view form
+        {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #E8E8E8;
+            padding: 30px;
+            box-shadow: 1px 1px 10px -1px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div class="home">
+    <div class="view">
+        <form method="post" >
+
+            <div class= " row ">
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group" >
+                        <label for="name" class="color-edit"> Customer Name</label>
+                        <input  name="name" type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter Name">
+                        <small id="NameHelp" class="form-text text-muted"> Recommended  Lower case</small>
+                    </div>
+                </div>
+
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group" >
+                        <label for="example" class="color-edit">  Address </label>
+                        <input required name="address" type="text" class="form-control" id="example" aria-describedby="Help" placeholder="Enter Full Address ">
+                        <small  id="Help" class="form-text text-muted"> Recommended lowercase characters </small>
+                    </div>
+
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group" >
+                        <label for="examplet" class="color-edit">  Mobile number </label>
+                        <input required name="mobile" type="text" class="form-control" id="examplet" aria-describedby="tHelp" placeholder=" Enter Mobile number ">
+                        <small  id="tHelp" class="form-text text-muted"> Recommended lowercase characters </small>
+                    </div>
+
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" class="color-edit"> Payment Method </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect1" name="payment"   >
+                            <option  value="Cash"> Cash </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6">
+
+                    <div class="form-group">
+                        <label for="exampleDate" class="color-edit">  Date of Confirmation </label>
+                        <input required name="date" type="date"  class="form-control" id="exampleDate" aria-describedby="DateHelp" placeholder="Enter Date ">
+                        <small id="DateHelp" class="form-text text-muted"> M/D/Y </small>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-12 col-sm-12">
+                    <div class="form-group">
+                        <input type="submit" name="submit" value=" Confirm Order " style="width: 100% ; margin-top: 10px ; color: snow ; font-weight: bold; background-color: black ; border: none ; outline: none ; height: 50px">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+        </form>
+
+
+
+    </div>
+
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

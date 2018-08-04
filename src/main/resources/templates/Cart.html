@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="templateUser :: head"></div>
+<body>
+
+<div class="top-border"></div>
+
+<div class="contain">
+
+    <div th:replace="templateUser :: header" ></div>
+    <div th:replace="templateUser :: logo" ></div>
+
+
+    <div class="wrapper">
+        <div class=" row">
+            <div th:replace="templateUser :: nav"></div>
+
+            <div class=" view col-9">
+                <p class="title "><a class="link-edit" href="/">Home</a> > <a href="/cart">Shopping Cart</a> </p>
+
+                <table >
+                    <tr style="margin-bottom: 10px">
+                        <th colspan="1">Products</th>
+                        <th colspan="1">Price</th>
+                        <th colspan="1">Quantity</th>
+                        <th colspan="1">Total</th>
+                    </tr>
+                    <tr style="margin-bottom: 10px"  th:each="cart : ${carts}" >
+                        <td colspan="1" th:text="${cart.getProductName()}"></td>
+                        <td colspan="1" th:text="${cart.getPrice()}"></td>
+                        <td colspan="1" th:text="${cart.getQuantity()}"></td>
+                        <td  colspan="1" th:text="${cart.getTotalPriceOfProductUnits()}"></td>
+                    </tr>
+
+                </table>
+
+                <div class="order-info">
+                    <p th:text="'Total $' + ' ' + ${total} "></p>
+                    <a class="link-1" href="/">Continue Shopping </a>
+                    <a class="link-2" href="/check-out">Check Out</a>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div th:replace="templateUser :: footer"></div>
+
+</div>
+
+
+
+</body>
+</html>

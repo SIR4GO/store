@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <title>Enter Data</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body >
+<div class="wrapper">
+
+    <header th:fragment="header">
+
+    <button>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+    <p class="font">Control Panel</p>
+
+    <a href="/login"> <img src="photo/manger.png"> </a>
+</header>
+
+    <nav th:fragment="nav">
+    <img src="photo/profile1.jpg">
+    <p class=" font"> <span STYLE="color: #ffffff ; margin-left:20px">A d m</span>    <span class="min_color">i n </span></p>
+    <ul>
+        <li> <i class="fa fa-apple white " aria-hidden="true"></i> <a href="/add-brand"><span STYLE="color: #ffffff ">Add</span> <span class="min_color">Brand </span> </a>    </li>
+        <li > <i class="fa fa-product-hunt white " aria-hidden="true"></i>     <a href="/add-product"><span STYLE="color: #ffffff ">Add</span>  <span class="min_color"> Product </span>    </a>    </li>
+        <li > <i class="fa fa-bar-chart white " aria-hidden="true"></i>     <a href="/admin-statistics"><span STYLE="color: #ffffff ">Show</span>  <span class="min_color"> Statistics </span>    </a>    </li>
+        <li > <i class="fa fa-home white " aria-hidden="true"></i>     <a href="/check-stores"><span STYLE="color: #ffffff ">Check</span>  <span class="min_color">  Stores </span>    </a>    </li>
+    </ul>
+</nav>
+
+    <div th:fragment="view" class="view">
+
+        <p>hello</p>
+    </div>
+
+
+</div>
+
+<div th:fragment="scripts">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+
+</body>
+
+
+
+</html>

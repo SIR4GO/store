@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <title>Enter Data</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header th:fragment="header">
+
+        <button>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <p class="font">Control Panel</p>
+
+        <a href="/login"> <img src="photo/manger.png"> </a>
+    </header>
+
+    <nav th:fragment="nav">
+
+        <img src="photo/profile1.jpg">
+        <p style="margin-left: 40px" class=" font"> <span STYLE="color: #ffffff ; margin-left:10px ; margin-top: 20px">Store </span>    <span class="min_color"> Collaborator </span></p>
+        <ul>
+            <li > <i class="fa fa-product-hunt white " aria-hidden="true"></i>     <a href="/add-product-to-store-coll"><span STYLE="color: #ffffff ">Add</span>  <span class="min_color"> Product </span>    </a>    </li>
+        </ul>
+    </nav>
+
+    <div class="view">
+
+
+    </div>
+
+
+</div>
+
+<div th:fragment="scripts">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/main.js"></script>
+</div>
+
+</body>
+
+
+</html>

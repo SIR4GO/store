@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Enter Data</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+        .row
+        {
+            justify-content: center;  /* To make Margin Auto ==> to align center  horizontal in child elements*/
+        }
+
+        .color-edit
+        {
+            color:#3395FF ;
+            font-weight: bold
+        }
+        .line
+        {
+            margin: auto auto 50px auto;
+            text-align: center;
+            width: 100% ;
+        }
+        .btnn
+        {
+            border: none ;
+            background-color:#3395FF ;
+            opacity: 0.8;
+            color:#f7f7f7
+        }
+        .p-hidden
+        {
+            font-size: 18px ;
+            margin: auto 0 auto 20px;
+            font-weight: bold ;
+            color: #3395FF ;
+            display: none;
+            font-family: Tahoma sans-serif;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+
+
+    <div th:replace="templateAdmin :: header"></div>
+
+    <div th:replace="templateAdmin :: nav"></div>
+
+    <div class="view">
+        <form method="post"  style = " width: 80% ; display: block ; margin :  60px auto 0 auto ; "  onsubmit=" return checkform(); ">
+
+
+            <div class= " row ">
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group" >
+                        <label for="name" class="color-edit"> Product Name</label>
+                        <input  name="name" type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter Product Name">
+                        <small id="NameHelp" class="form-text text-muted"> Recommended  Lower case</small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group" >
+                        <label for="exampleVersion" class="color-edit"> Product version</label>
+                        <input  name="version" type="text" class="form-control" id="exampleVersion" aria-describedby="versionHelp" placeholder="Enter Product Version">
+                        <small id="versionHelp" class="form-text text-muted"> Recommended  Lower case</small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6">
+
+                    <div class="form-group " >
+                        <label for="examplePrice" class="color-edit "  > Product Price </label>
+                        <input  required name="price" type="number" step="any"  class="form-control" id="examplePrice" aria-describedby="PriceHelp" placeholder="Enter Price">
+                        <small   id="PriceHelp" class="form-text text-muted"> Enter numeric value </small>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect3" class="color-edit"> Categories In System  </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect3" name="category"  >
+
+                            <option  value="electronics">Electronics</option>
+                            <option  value="clothes">Clothes</option>
+                            <option  value="accessories">Accessories</option>
+                            <option  value="shoes">Shoes</option>
+                            <option  value="software">Software</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class=" col-lg-6 col-sm-6">
+                    <div class="form-group" >
+                        <label for="exampleQuantity" class="color-edit"> Enter Quantity </label>
+                        <input required name="quantity" type="number" step="1" class="form-control" id="exampleQuantity" aria-describedby="QuantityHelp" placeholder="Enter Quantity ">
+                        <small  id="QuantityHelp" class="form-text text-muted">Enter Numeric value </small>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1" class="color-edit"> Brands In System  </label>
+                        <select  required  class="form-control" id="exampleFormControlSelect1" name="brandName"  >
+
+                            <option th:each="brand  : ${brands} "  th:text=" ${brand.getName()} "  th:value="${brand.getName()}">
+
+                            </option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="form-group">
+                <input type="submit" name="submit" value=" Add Product " style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+            </div>
+
+
+
+        </form>
+
+
+
+    </div>
+
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,298 @@
+/* ready classes */
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.red
+{
+    background-color: red;
+}
+.orange
+{
+    background-color: #FFB402;
+}
+.green
+{
+    background-color: #19BC9C
+}
+.blue
+{
+    background-color: #21A7F0;
+}
+.yellow
+{
+    background-color:#f9df1b ;
+}
+
+
+.container
+{
+    width: 1200px;
+    margin: auto;
+}
+.text_center
+{
+    text-align: center;
+}
+.upper
+{
+    text-transform: uppercase;
+}
+.min_color
+{
+     color: blue;
+}
+.min_background
+{
+
+}
+.font
+{
+    font-weight: bold;
+    font-size: 24px;
+}
+.white
+{
+    color: #ffffff;
+}
+
+/* ready classes */
+
+.effect
+{
+    margin-left: -300px;
+}
+
+.expand
+{
+    width: 100% !important;
+}
+.align-vertical
+{
+    margin: auto 0;
+}
+.align-horizontal
+{
+    margin: 0 auto;
+}
+
+.color-edit
+{
+    color: #3395FF;
+    font-weight: bold;
+}
+
+/* Start Header  */
+
+body
+{
+ font-family: sans-serif;
+    height: 630px;
+}
+.wrapper
+{
+   position: relative;
+   height: 100%!important;
+}
+
+.wrapper header
+{
+
+    height: 80px;
+    background-color: #ffffff;
+    border-bottom: 0.5px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.wrapper header button
+{
+    width: 38px;
+    background: none;
+    border: none;
+    outline: none;
+    margin:auto 0 auto 22px;
+
+
+}
+
+
+.wrapper header button .line
+{
+    height: 3px;
+    display: block;
+    margin-bottom:5px;
+    background-color: blue;
+}
+
+.wrapper header p
+{
+
+   position: relative;
+    left: -530px;
+    top: -4px;
+
+    margin:auto 0 ;
+}
+
+.wrapper header a
+{
+    margin: auto 30px auto 0;
+}
+.wrapper header a img
+{
+    width: 43px;
+}
+.wrapper header .info
+{
+   float: right;
+    margin-right: 20px;
+
+}
+
+.wrapper nav
+{
+    font-family: sans-serif;
+    background-color: black;
+    border: 0.2px solid #000000;
+    height: 89%;
+    float: left;
+    width: 20%;
+    transition: margin-left 0.5s;
+    position: fixed;
+
+}
+.wrapper nav img
+{
+
+    width: 130px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.wrapper nav ul
+{
+    margin-top: 80px;
+}
+.wrapper nav li
+{
+
+    font-size: 17px;
+    display: block;
+    list-style: none;
+    margin-bottom:30px;
+
+}
+.wrapper nav a
+{
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.wrapper nav a:focus
+{
+    color: blue;
+}
+
+
+.wrapper nav p
+{
+    margin-left: 55px;
+
+}
+
+.wrapper .view
+{
+
+    height: 88%;
+    width: 80%;
+    float: right;
+    overflow:scroll ;
+
+
+}
+.wrapper .view .parent
+{
+    height: 100%;
+
+}
+.wrapper .view .parent .cards
+{
+   height: 100%;
+
+
+}
+
+.wrapper .view .parent .quick-access
+{
+    height: 90%;
+    background-color: #FEFEFE;
+    margin:  auto  ;
+    border-radius: 3px;
+    padding: 0;
+    width: 100%;
+
+}
+
+.wrapper .view .parent .quick-access .title-part
+{
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 0 15px 15px ;
+
+    border-bottom: .5px solid gainsboro;
+
+}
+.wrapper .view .parent .quick-access .title
+{
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline;
+}
+.wrapper .view .parent .cards .row
+{
+   justify-content: center;
+}
+.wrapper .view .parent .cards .row .icon-style
+{
+    height: 100px;
+    border-radius: 4px;
+    margin: 30px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper .view .parent .cards .row .icon-style .info p
+{
+    margin-bottom: 0;
+    font-weight: bold;
+    color: azure;
+}
+.wrapper .view .parent .cards .row .icon-style .info p:first-child
+{
+    font-size: 25px;
+}
+
+
+.wrapper .view .parent .cards .row2 div
+{
+    margin-top: 80px;
+    height:170px;
+    background-color: #FEFEFE;
+    border-radius: 4px;
+
+
+}
+
+.wrapper .view .parent .cards
+{
+
+}
+
+
+
+
+
+
+/* End Header  */

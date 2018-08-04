@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Brand</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+        .row
+        {
+            justify-content: center;  /* To make Margin Auto ==> to align center  horizontal in child elements*/
+        }
+
+        .color-edit
+        {
+            color:#3395FF ;
+            font-weight: bold
+        }
+        .line
+        {
+            margin: auto auto 50px auto;
+            text-align: center;
+            width: 100% ;
+        }
+        .btnn
+        {
+            border: none ;
+            background-color:#3395FF ;
+            opacity: 0.8;
+            color:#f7f7f7
+        }
+        .p-hidden
+        {
+            font-size: 18px ;
+            margin: auto 0 auto 20px;
+            font-weight: bold ;
+            color: #3395FF ;
+            display: none;
+            font-family: Tahoma sans-serif;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+
+        <button>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <p class="font">Control Panel</p>
+
+        <a href="/login"> <img src="photo/manger.png"> </a>
+    </header>
+
+    <nav>
+
+        <img src="photo/profile1.jpg">
+        <p class=" font"> <span STYLE="color: #ffffff ; margin-left:20px">A d m</span>    <span class="min_color">i n </span></p>
+        <ul>
+            <li> <i class="fa fa-bar-chart white " aria-hidden="true"></i> <a href="/add-brand"><span STYLE="color: #ffffff ">Add</span> <span class="min_color">Brand </span> </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/add-product"><span STYLE="color: #ffffff ">Add</span>  <span class="min_color"> Product </span>    </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/check-stores"><span STYLE="color: #ffffff ">Check</span>  <span class="min_color">  Stores </span>    </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/admin-statistics"><span STYLE="color: #ffffff ">Show</span>  <span class="min_color"> Statistics </span>    </a>    </li>
+        </ul>
+    </nav>
+
+    <div class="view">
+        <form method="post"  style = " width: 80% ; display: block ; margin :  60px auto 0 auto ; " onsubmit=" return checkform(); ">
+
+
+            <div class= " row ">
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group" >
+                        <label for="name" class="color-edit"> Brand Name</label>
+                        <input  name="name" type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter Product Name">
+                        <small id="NameHelp" class="form-text text-muted"> Recommended  Lower case</small>
+                    </div>
+                </div>
+
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group" >
+                        <label for="exampleCategory" class="color-edit"> Enter Category </label>
+                        <input required name="category" type="text" class="form-control" id="exampleCategory" aria-describedby="CategoryHelp" placeholder="Enter Category ">
+                        <small  id="CategoryHelp" class="form-text text-muted"> Recommended lowercase characters </small>
+                    </div>
+
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6">
+
+                    <div class="form-group">
+                        <label for="exampleDate" class="color-edit"> Enter Date </label>
+                        <input required name="date" type="date"  class="form-control" id="exampleDate" aria-describedby="DateHelp" placeholder="Enter Date ">
+                        <small id="DateHelp" class="form-text text-muted"> M/D/Y </small>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class=" col-lg-6 col-sm-6">
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <div class="form-group">
+                <input type="submit" name="submit" value=" Add Brand " style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+            </div>
+
+
+
+        </form>
+
+
+
+    </div>
+
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+
+</html>

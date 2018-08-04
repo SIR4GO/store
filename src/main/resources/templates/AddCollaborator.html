@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:replace="templateOwner :: head"></div>
+<body>
+<div class="wrapper">
+    <div th:replace="templateOwner :: header"></div>
+    <div th:replace="templateOwner :: nav"></div>
+
+
+
+
+    <div class="view">
+        <form method="post"  style = " width: 80% ; display: block ; margin :  60px auto 0 auto ; " onsubmit=" return checkform(); ">
+
+
+            <div class= " row ">
+                <div class=" col-lg-6 col-sm-6  ">
+                    <div class="form-group" >
+                        <label for="name" class="color-edit"> Collaborator Name</label>
+                        <input  name="name" type="text" class="form-control" id="name" aria-describedby="NameHelp" placeholder="Enter  Collaborator Name">
+                        <small id="NameHelp" class="form-text text-muted"> Recommended  Lower case</small>
+                    </div>
+                </div>
+
+
+
+                <div class=" col-lg-6 col-sm-6  ">
+
+                    <div class="form-group" >
+                        <label for="exampleCategory" class="color-edit">  Collaborator User Name </label>
+                        <input required name="userName" type="text" class="form-control" id="exampleCategory" aria-describedby="CategoryHelp" placeholder="Enter  Collaborator User name ">
+                        <small  id="CategoryHelp" class="form-text text-muted"> Recommended lowercase characters </small>
+                    </div>
+
+                </div>
+
+
+                <div class=" col-lg-6 col-sm-6">
+
+                    <div class="form-group">
+                        <label for="exampleDate" class="color-edit">  Collaborator Password </label>
+                        <input required name="password" type="password"  class="form-control" id="exampleDate" aria-describedby="DateHelp" placeholder="Enter  Collaborator Password ">
+                        <small id="DateHelp" class="form-text text-muted"> Recommended more than 8 characters  </small>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class=" col-lg-6 col-sm-6">
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+            <div class="form-group">
+                <input type="submit" name="submit" value=" Add Collaborator " style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+            </div>
+
+
+
+        </form>
+
+    </div>
+</div>
+
+<div th:replace="templateOwner :: scripts"></div>
+
+</body>
+</html>

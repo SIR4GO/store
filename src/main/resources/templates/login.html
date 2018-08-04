@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link  rel="stylesheet" href="css/login.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <title>Log in </title>
+</head>
+
+
+
+<body>
+
+<div class="box" >
+    <h1>Log In</h1>
+    <form method="post">
+        <label>User Name</label>
+        <br>
+        <input type="text" name="username"  placeholder="Enter UserName" required>
+        <br>
+        <label>Password</label>
+        <br>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <br>
+
+
+            <label style="font-size: 16px ; margin-top: 4px" >  <input type="checkbox" name="userType" value="admin">  Log in as admin </label>
+
+        <input type="submit" name="submit" required value="Sign In">
+        <a href="/register"> <i class="fa fa-user-plus" aria-hidden="true"></i>  If you not member ! <span> Sign Up </span>  </a>
+    </form>
+</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+
+    <link  rel="stylesheet" href="css/register.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="js/normalize.css">
+    <script src="js/validate.js"></script>
+    <title>Register </title>
+</head>
+<body>
+
+<div class="box" >
+    <h1>Sign Up</h1>
+    <form method="post"  onsubmit=" return checkform(); ">
+        <label> Name </label>
+        <br/>
+        <input th:required="required"  type="text" name="name"  placeholder="Enter Name" required>
+        <br/>
+        <label>User Name</label>
+        <br/>
+        <input  th:required="required" type="text" name="username" id="name" placeholder="Enter username" required>
+        <br/>
+        <label>Password</label>
+        <br/>
+        <input th:required="required" type="password" name="password" id="password" placeholder="Enter password" required>
+        <br/>
+        <label>Google mail</label>
+        <br/>
+        <input  th:required="required" type="email" name="email" id="email" placeholder="Enter email" required>
+        <br/>
+        <input th:required="required" type="submit" name="submit" required value="Register">
+        <br/>
+        <br/>
+        <a href="/login"><i class="fa fa-user-o" aria-hidden="true"></i> If you are member ! <span> Sign in </span>  </a>
+    </form>
+</div>
+
+
+</body>
+</html>

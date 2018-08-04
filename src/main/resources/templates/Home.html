@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="templateUser :: head"></div>
+<body>
+
+<div class="top-border"></div>
+
+<div class="contain">
+
+    <div th:replace="templateUser :: header" ></div>
+    <div th:replace="templateUser :: logo" ></div>
+
+
+    <div class="wrapper">
+            <div class=" row">
+                <div th:replace="templateUser :: nav"></div>
+
+                <div class=" view col-9">
+                    <div class="row" style="margin-top: 10px;">
+                        <div th:each="product : ${products}" class="col-md-4">
+                            <div class="card" style="width: 18rem; margin-bottom: 50px ; border: none" >
+                                <img style="height: 200px" class="card-img-top" src="photo/p-logo.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 th:text="${product.getName()}" class="card-title"></h5>
+                                    <p th:text="${product.getProduct_title()}" class="card-text"></p>
+                                    <a th:href="@{/product(name=${product.getName()})}" name="order" class="btn btn-dark"> Details </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+    </div>
+
+    <div th:replace="templateUser :: footer"></div>
+
+</div>
+
+
+
+</body>
+</html>

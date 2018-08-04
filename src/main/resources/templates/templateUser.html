@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/UserStyle.css">
+
+</head>
+<body>
+
+<div class="top-border"></div>
+
+<div class="contain">
+    <div th:fragment="header" class="header">
+        <div class="user"></div>
+        <div class=" vertical-align shop-cart">
+            <a class="main-link" href="/cart">
+                <i class="vertical-align fa fa-shopping-cart "></i>
+                <p class=" vertical-align i-title"><span th:text="${session.counter }"></span></p>
+            </a>
+            <a href="/cart" class=" another-link vertical-align">Check out</a>
+        </div>
+    </div>
+
+    <div th:fragment="logo" class="logo">
+        <h1 class=" main-color vertical-align"> Online Shop...</h1>
+    </div>
+
+    <div class="wrapper">
+        <div class=" row">
+
+            <div th:fragment="nav" class=" nave list col-3">
+                <ul>
+                    <li> <a href="/?category=All">Home</a></li>
+                    <li> <a href="/?category=electronics">Electronics</a></li>
+                    <li> <a href="/?category=clothes">Clothes</a></li>
+                    <li> <a href="/?category=accessories">Accessories</a></li>
+                    <li> <a href="/?category=shoes">Shoes</a></li>
+                    <li> <i class="fa fa-facebook  "></i> <i class="fa fa-twitter "></i> <i class="fa fa-yahoo "></i> <i class="fa fa-youtube "></i> <i class="fa fa-instagram "></i> <i class="fa fa-google-plus "></i></li>
+                </ul>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <footer th:fragment="footer">
+        <div class="line vertical-align"> <p>Copyright © 2018, Online shop . Ecommerce Software by Mahmoud Ahmed </p></div>
+        <div class=" vertical-align icons"><i class="fa fa-cc-visa ">  </i> <i class="fa fa-paypal "></i> </div>
+    </footer>
+
+
+
+</div>
+
+
+</body>
+
+</html>

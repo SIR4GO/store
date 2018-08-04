@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Store</title>
+    <meta charset="utf-8" />
+
+
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style1.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+
+        .row
+        {
+            justify-content: center;  /* To make Margin Auto ==> to align center  horizontal in child elements*/
+        }
+
+        .color-edit
+        {
+            color:#3395FF ;
+            font-weight: bold
+        }
+        .line
+        {
+            margin: auto auto 50px auto;
+            text-align: center;
+            width: 100% ;
+        }
+        .btnn
+        {
+            border: none ;
+            background-color:#3395FF ;
+            opacity: 0.8;
+            color:#f7f7f7
+        }
+        .p-hidden
+        {
+            font-size: 18px ;
+            margin: auto 0 auto 20px;
+            font-weight: bold ;
+            color: #3395FF ;
+            display: none;
+            font-family: Tahoma sans-serif;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+
+        <button>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <p class="font">Control Panel</p>
+
+        <a href="/login"> <img src="photo/manger.png"> </a>
+    </header>
+
+    <nav>
+
+        <img src="photo/profile1.jpg">
+        <p style="margin-left: 40px" class=" font"> <span STYLE="color: #ffffff ; margin-left:20px">Ad</span>    <span class="min_color"> min </span></p>
+        <ul>
+            <li> <i class="fa fa-bar-chart white " aria-hidden="true"></i> <a href="/add-product"><span STYLE="color: #ffffff ">Add</span> <span class="min_color"> Product </span> </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/add-brand"><span STYLE="color: #ffffff ">Add</span>  <span class="min_color">  Brand </span>    </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/check-stores"><span STYLE="color: #ffffff ">Check</span>  <span class="min_color">  Stores </span>    </a>    </li>
+            <li > <i class="fa fa-users white " aria-hidden="true"></i>     <a href="/admin-statistics"><span STYLE="color: #ffffff ">Show</span>  <span class="min_color"> Statistics </span>    </a>    </li>
+        </ul>
+    </nav>
+
+    <div class="view">
+        <form method="post"  style = " width: 80% ; display: block ; margin :  60px auto 0 auto ; " >
+
+
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1" class="color-edit"> Accept Or Reject Store In System  </label>
+                    <select  required  class="form-control" id="exampleFormControlSelect1" name="store"  >
+
+                            <option th:each="store  : ${stores} "  th:text=" ${store.getName()} + ' ' + ' ('  +  ${store.getStatue()} + ')' "  th:value="${store.getName()}">
+
+                            </option>
+
+                    </select>
+                </div>
+
+
+               <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="submit" name="confirm" value="Accepted" style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+                      </div>
+                  </div>
+
+                   <div class="col-md-6">
+                       <div class="form-group">
+                           <input type="submit" name="confirm" value="Rejected" style="width: 100% ; margin-top: 40px ; color: snow ; background-color: #3395FF ; border: none ; outline: none ; height: 50px">
+                       </div>
+                   </div>
+               </div>
+
+
+        </form>
+
+
+
+    </div>
+
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+
+</html>
